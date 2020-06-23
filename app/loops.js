@@ -6,7 +6,11 @@
 // 1*2*3*4 = 24
 
 function factorials(num) {
-
+  let product = 1;
+  for (x = 1; x <= num; x++) {
+    product = product * x;
+  }
+  return product;
 }
 
 // ------------------------------------------
@@ -17,7 +21,11 @@ function factorials(num) {
 // output: 20
 
 function rangeTotal(n1, n2) {
-
+  let sum = 0;
+  for (let x = n1; x <= n2; x++) {
+    sum += x
+  }
+  return sum;
 }
 
 // ------------------------------------------
