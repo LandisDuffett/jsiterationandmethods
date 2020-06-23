@@ -20,14 +20,24 @@ function rearranger(arr) {
 
 function largestNum(arr) {
     let largest = arr[0];
-    for (let x = 0; x < arr.length; x++) {
+    let count = 1;
+    for (let x = 1; x < arr.length; x++) {
         if (arr[x] > largest) {
             largest = arr[x];
         }
+        else if (arr[x] == largest) {
+            count++;
+        }
     }
-    return largest;
+    if (count >= 2) {
+        var obj = {}
+        obj[largest] = count;
+        return obj;
+    }
+    else {
+        return largest;
+    }
 }
-
 
 // ------------------------------------------
 
@@ -38,6 +48,7 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+
 }
 
 
