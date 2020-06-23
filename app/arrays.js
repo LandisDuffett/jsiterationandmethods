@@ -48,7 +48,12 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
-
+    let newarr = [];
+    for (x = 0; x < arr.length; x++) {
+        let y = arr[x] * arr.length;
+        newarr.push(y);
+    }
+    return newarr;
 }
 
 
@@ -62,10 +67,16 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
-
+    let newArray = arr.flat(Infinity);
+    let finalArray = [];
+    for (x = 0; x < newArray.length; x++) {
+        if ((newArray[x] != 0) && (typeof newArray[x] != "object")) {
+            finalArray.push(newArray[x]);
+        }
+    }
+    console.log(finalArray)
+    return finalArray;
 }
-
-
 // ------------------------------------------
 
 
