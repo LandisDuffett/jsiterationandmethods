@@ -108,7 +108,14 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-
+    if (firstClass) {
+        let x = flights.find(flight => flight.to.toLowerCase() == destination.toLowerCase());
+        return x.prices.firstClass;
+    }
+    else {
+        let x = flights.find(flight => flight.to.toLowerCase() == destination.toLowerCase());
+        return x.prices.standard;
+    }
 }
 
 
@@ -128,9 +135,16 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 17, name: 'St. MaryLou de la Playa Carmen' }, { id: 51, name: 'Doug' },
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
-function findById(id) {
-
+function findById(num) {
+    let result = staff.find(person => person.id == num);
+    let object = { error: "No user with that id." };
+    if (!result) {
+        return object;
+    } else {
+        return result;
+    }
 }
+
 
 
 // ------------------------------------------
@@ -155,5 +169,10 @@ let theBand = {
     }]
 }
 
-function bandMemberDetails(name) {
+function bandMemberDetails(id) {
+    for (let x = 0; x < theBand.members.length; x++) {
+        if (theBand.members[x].name == id) {
+            return `${id} is in the band and plays the ${theBand.members[x].instrument}`
+        }
+    }
 }
