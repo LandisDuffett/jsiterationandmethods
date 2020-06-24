@@ -171,8 +171,9 @@ let theBand = {
 
 function bandMemberDetails(id) {
     for (let x = 0; x < theBand.members.length; x++) {
-        if (theBand.members[x].name == id) {
-            return `${id} is in the band and plays the ${theBand.members[x].instrument}`
+        let y = theBand.members[x].name.toLowerCase();
+        if (y.includes(id.toLowerCase())) {
+            return `${theBand.members[x].name} is in the band and plays the ${theBand.members[x].instrument}`
         }
     }
 }
