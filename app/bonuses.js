@@ -9,7 +9,16 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function letterChecker(str) {
-
+  let alph = "abcdefghijklmnopqrstuvwxyz"
+  for (let x = 0; x < str.length; x++) {
+    if (alph.includes(str)) {
+      return "no missing letters"
+    } else {
+      let y = str.charCodeAt(0);
+      let z = str.charCodeAt(-1);
+      for (y; y <= z;)
+    }
+  }
 }
 
 
