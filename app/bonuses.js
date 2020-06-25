@@ -33,8 +33,17 @@ function letterChecker(str) {
 // output: true (because 4+3)
 
 function sumEqualsTarget(arr, target) {
+  for (let y = 0; y < arr.length; y++) {
+    for (let z = 0; z < arr.length; z++) {
+      if (y == z) {
+        continue;
+      } else if (arr[y] + arr[z] == target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
-
 
 // ------------------------------------------
 
@@ -46,4 +55,6 @@ function sumEqualsTarget(arr, target) {
 // output: [2, 1, 4, 3, 6, 6, 5, 9, 8]
 
 function oddAscender(arr) {
+  let sorted = [];
+
 }
