@@ -67,8 +67,9 @@ function oddAscender(arr) {
   }
   odds = odds.sort(function (a, b) {
     return a - b;
-  })
+  });
   for (let y = 0; y < sorted.length; y++) {
+    debugger
     let z = 0;
     if (sorted[y] == 'x') {
       sorted.splice(y, 1, odds[z]);
