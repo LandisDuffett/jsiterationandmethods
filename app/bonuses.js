@@ -9,14 +9,21 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function letterChecker(str) {
-  let alph = "abcdefghijklmnopqrstuvwxyz"
-  for (let x = 0; x < str.length; x++) {
+  for (let i = fromCharCode(str[0]); i < str.length; i++) {
+    if (i != i + str.charCode(i) + 97) {
+      return fromCharCode(i)
+    }
+
+
+
     if (alph.includes(str)) {
       return "no missing letters"
     } else {
       let y = str.charCodeAt(0);
-      let z = str.charCodeAt(-1);
-      for (y; y <= z;)
+      let z = str.length - 1;
+      for (let i = 0; i < str.length; i++) {
+        if (str[])
+      }
     }
   }
 }
