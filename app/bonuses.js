@@ -9,11 +9,10 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function letterChecker(str) {
-  debugger
   for (let i = 0; i < str.length; i++) {
     let delta = str.charCodeAt(0);
-    if (str.fromCharCode(str[i]) = i + delta) {
-      return str.fromCharCode(i + delta)
+    if (str.charCodeAt(i) != (i + delta)) {
+      return String.fromCharCode(i + delta)
     }
   }
   return "no missing letters";
